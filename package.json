@@ -1,0 +1,22 @@
+{
+  "name": "glam-coding-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "pg": "^6.1.5",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "DATABASE_URL=postgres://localhost/glam_db nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
