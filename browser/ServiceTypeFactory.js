@@ -3,6 +3,6 @@ angular.module('gs').factory('ServiceTypeFactory', function($http){
     findAll: function(){
       return $http.get('/api/serviceTypes')
         .then( function(response){ return response.data });
-    }
+    },
   };
 });

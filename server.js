@@ -1,8 +1,10 @@
 const db = require('./db');
 const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+app.use(bodyParser.json());
 
 app.use('/browser', express.static(path.join(__dirname, 'browser')));
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));

@@ -3,11 +3,23 @@ const Sequelize = require('sequelize');
 const conn = new Sequelize(process.env.DATABASE_URL);
 
 const ServiceType = conn.define('service_type', {
-  name: conn.Sequelize.STRING
+  name: {
+    type: conn.Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  }
 });
 
 const Service = conn.define('service', {
-  name: conn.Sequelize.STRING,
+  name: {
+    type: conn.Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
   priority: {
     type: conn.Sequelize.INTEGER,
     defaultValue: 1

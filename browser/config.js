@@ -13,8 +13,7 @@ angular.module('gs').config(function($stateProvider, $urlRouterProvider){
       url: '/serviceTypes',
       templateUrl: '/browser/templates/serviceTypes.html',
       controller: 'ServiceTypesController' 
-    });
-
+    })
     $urlRouterProvider.otherwise('/');
 
 });
