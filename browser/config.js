@@ -12,10 +12,7 @@ angular.module('gs').config(function($stateProvider, $urlRouterProvider){
       },
       url: '/serviceTypes',
       templateUrl: '/browser/templates/serviceTypes.html',
-      controller: function($scope, serviceTypes){
-        console.log(serviceTypes);
-        $scope.serviceTypes = serviceTypes;
-      }
+      controller: 'ServiceTypesController' 
     });
 
     $urlRouterProvider.otherwise('/');
