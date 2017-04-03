@@ -1,9 +1,9 @@
 const app = require('express').Router();
 const models = require('./db').models;
 
-app.get('/serviceTypes', (req, res, next)=> {
-  models.ServiceType.findAll()
-    .then( serviceTypes=> res.send(serviceTypes))
+app.get('/categories', (req, res, next)=> {
+  models.Category.findAll()
+    .then( categories => res.send(categories))
     .catch(next);
 });
 

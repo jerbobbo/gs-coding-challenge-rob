@@ -4,15 +4,15 @@ angular.module('gs').config(function($stateProvider, $urlRouterProvider){
       url: '/',
       templateUrl: '/browser/templates/home.html'
     })
-    .state('serviceTypes', {
+    .state('categories', {
       resolve: {
-        serviceTypes: function(ServiceTypeFactory){
-          return ServiceTypeFactory.findAll();
+        categories: function(CategoryFactory){
+          return CategoryFactory.findAll();
         }
       },
       url: '/serviceTypes',
-      templateUrl: '/browser/templates/serviceTypes.html',
-      controller: 'ServiceTypesController' 
+      templateUrl: '/browser/templates/categories.html',
+      controller: 'CategoriesController' 
     })
     $urlRouterProvider.otherwise('/');
 

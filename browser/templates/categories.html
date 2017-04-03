@@ -1,0 +1,6 @@
+<h2>Categories</h2>
+<ul class='list-group'>
+  <li ng-repeat='category in categories' class='list-group-item'>
+    <a ui-sref='category({ id: category.id})'>{{ category.name }}</a>
+  </li>
+</ul>

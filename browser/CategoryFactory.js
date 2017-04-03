@@ -1,7 +1,7 @@
-angular.module('gs').factory('ServiceTypeFactory', function($http){
+angular.module('gs').factory('CategoryFactory', function($http){
   return {
     findAll: function(){
-      return $http.get('/api/serviceTypes')
+      return $http.get('/api/categories')
         .then( function(response){ return response.data });
     },
   };
