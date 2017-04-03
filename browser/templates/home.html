@@ -2,19 +2,32 @@
   <h2>GlamSquad Coding Challenge</h2>
   <div class='panel panel-default'>
     <div class='panel panel-heading'>
-      Feature One
+      Feature One - New Server Side Routers
     </div>
     <div class='panel panel-body'>
       <ul>
-        <li>add a server side route which returns a single category along with all of it's services.
+        <li>
+          add a server side route which returns a single category along with all of it's services.
+          <br />
+          <em>GET: /api/categories/:categoryId</em>
         </li>
-        <li>add a server side route which deletes a service from a category</li>
-        <li>add a server side route which adds a service to a category</li>
+        <li>
+          add a server side route which deletes a service from a category
+          <br />
+          <em>DELETE: /api/categories/:categoryId/services/:id</em>
+        </li>
+        <li>
+          add a server side route which adds a service to a category
+          <br />
+          <em>POST: /api/categories/:categoryId/services</em>
+          <br />
+          EXAMPLE PAYLOAD: { name: 'a new service' }
+        </li>
     </div>
   </div>
   <div class='panel panel-default'>
     <div class='panel panel-heading'>
-      Feature Two 
+      Feature Two - Show Category Details 
     </div>
     <div class='panel panel-body'>
       Create front end code which shows the category details when a category link is clicked.
@@ -22,7 +35,7 @@
   </div>
   <div class='panel panel-default'>
     <div class='panel panel-heading'>
-      Feature Three 
+      Feature Three - Create a Service
     </div>
     <div class='panel panel-body'>
       Enable the user to creater a new service on the category detail page
@@ -30,7 +43,7 @@
   </div>
   <div class='panel panel-default'>
     <div class='panel panel-heading'>
-      Feature Four 
+      Feature Four - Delete a Service 
     </div>
     <div class='panel panel-body'>
       Enable the user to delete a service on the category detail page.
