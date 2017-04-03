@@ -10,9 +10,19 @@ angular.module('gs').config(function($stateProvider, $urlRouterProvider){
           return CategoryFactory.findAll();
         }
       },
-      url: '/serviceTypes',
+      url: '/categories',
       templateUrl: '/browser/templates/categories.html',
       controller: 'CategoriesController' 
+    })
+    .state('category', {
+      resolve: {
+        category: function(CategoryFactory, $stateParams){
+          return CategoryFactory.findOne($stateParams.id);
+        }
+      },
+      url: '/categories/:id',
+      templateUrl: '/browser/templates/category.html',
+      controller: 'CategoryController' 
     })
     $urlRouterProvider.otherwise('/');
 
