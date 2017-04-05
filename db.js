@@ -24,7 +24,7 @@ const Service = conn.define('service', {
     type: conn.Sequelize.INTEGER,
     defaultValue: 1
   }
-});
+}); 
 
 Service.belongsTo(Category);
 Category.hasMany(Service);
@@ -56,4 +56,3 @@ module.exports = {
     Category
   }
 };
-

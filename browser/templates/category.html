@@ -1,4 +1,14 @@
 <a ui-sref='categories'>Back to All Categories</a>
 <br />
-<h2>Category Detail for ... </h2>
-{{ category }}
+<h2>Category Detail for {{ category.name }}</h2>
+
+<form class="form-group">
+  <input ng-model="newServiceName" name="newService"/>
+  <button ng-click="createService(category.id, newServiceName)">Create Service</button>
+</form>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="service in category.services track by $index">
+    {{ service.name }}
+    <button class="button-danger" ng-click="removeService(service.id, $index)">Delete</button>
+  </li>
+</ul>
